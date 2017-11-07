@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import { NavigationDrawer } from 'react-md';
-import logo from './logo.svg';
+import LandingPage from './components/LandingPage';
 import './App.css';
 
+const appStyle = {
+  height: '100%',
+};
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
   render() {
     return (
-      <NavigationDrawer
-        drawerTitle="react-md with CRA"
-        toolbarTitle="Welcome to react-md"
-      >
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </div>
-      </NavigationDrawer>
+      <div id="app" style={appStyle}>
+        <LandingPage />
+      </div>
     );
   }
 }
