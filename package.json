@@ -1,19 +1,16 @@
 {
-  "name": "hackathon_starter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "hackathon",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.17"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ejvelasco/hackathon_starter.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ejvelasco/hackathon_starter/issues"
-  },
-  "homepage": "https://github.com/ejvelasco/hackathon_starter#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
