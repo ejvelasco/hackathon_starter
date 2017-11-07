@@ -8,7 +8,6 @@ const landingPageStyle = {
   height: '100%',
 };
 
-
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
