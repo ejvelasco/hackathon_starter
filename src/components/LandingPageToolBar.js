@@ -1,5 +1,6 @@
 import React from 'react';
 import { Toolbar, Button, FontIcon } from 'react-md';
+import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
 const logoPath = 'logo_blue.png';
@@ -17,9 +18,9 @@ const toolBarButtonStyle = {
 };
 const smallLogoStyle = {
   height: '40px', 
-  width: '32px', 
+  width: '40px', 
   float: 'left',
-  margin: '10px',
+  margin: '12px',
   marginRight: '5px',
 };
 const brandStyle = {
@@ -28,9 +29,8 @@ const brandStyle = {
   fontSize: '25px',
   fontWeight: 700,
   color: '#42a5f5',
-}
+};
 const toolBarItems = {
-  title: 'Logo',
   navItems : [{
     key: 'inbox',
     primaryText: 'Inbox',
@@ -38,8 +38,8 @@ const toolBarItems = {
     active: true,
   }],
   children: [
-    <Button style={toolBarButtonStyle} key={'logIn'} flat>Log In</Button>,
-    <Button style={toolBarButtonStyle} key={'getStarted'} raised primary theme>Get Started</Button>
+    <Link to='/login' key={'logIn'}><Button style={toolBarButtonStyle} flat>Log In</Button></Link>,
+    <Link to='/start' key={'getStarted'}><Button style={toolBarButtonStyle}  raised primary theme>Get Started</Button></Link>,
   ],
 };
 
@@ -48,7 +48,7 @@ class LandingPageToolBar extends React.Component {
     return (
       <Toolbar
         id="main-toolbar"
-        title={<div><img style={smallLogoStyle} src={logoPath}></img><h1 style={brandStyle}>Name</h1></div>}
+        title={<div><img style={smallLogoStyle} src={logoPath}></img><h1 style={brandStyle}>PairUp</h1></div>}
         actions={toolBarItems.children}
         style={toolBarStyle}
       >
