@@ -1,7 +1,6 @@
 import React from 'react';
 import { Toolbar, Button, FontIcon } from 'react-md';
 import { Link } from 'react-router-dom';
-import Nav from './Nav';
 
 const logoPath = 'logo_blue.png';
 const toolBarStyle = {

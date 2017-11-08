@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Cell, Grid, Divider, FontIcon, TextField, SVGIcon, SelectField } from 'react-md';
+import axios from 'axios';
 
 const STRING_ITEMS = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 const sectionStyle = {
@@ -26,6 +27,14 @@ const toolBarButtonStyle = {
 class RegisterInfluencer extends React.Component {
   constructor(props){
     super(props);
+  }
+  register() {
+    axios.post('/api/register', {})
+     .then((res) => {
+       console.log(res.data);
+       // newState.user = user;
+       // this.setState(newState);
+     });
   }
   render() {
     return (
@@ -65,7 +74,7 @@ class RegisterInfluencer extends React.Component {
                 leftIcon={<FontIcon>lock</FontIcon>}
                 passwordIcon={<FontIcon>remove_red_eye</FontIcon>}
               />
-              <Button style={toolBarButtonStyle}  raised primary theme>Create Account</Button>
+              <Button style={toolBarButtonStyle}  onClick={this.register.bind(this)} raised primary theme>Create Account</Button>
             </section>
           </Cell>
         </Grid>
