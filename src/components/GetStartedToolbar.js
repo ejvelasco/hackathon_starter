@@ -49,7 +49,7 @@ class GetStartedToolBar extends React.Component {
     return (
       <Toolbar
         id="main-toolbar"
-        title={<div style={brandContainerStyle}><img style={smallLogoStyle} src={logoPath}></img><h1 style={brandStyle}>PairUp</h1></div>}
+        title={ <Link to={'/'}><img style={smallLogoStyle} src={logoPath}></img><h1 style={brandStyle}>PairUp</h1></Link>}
         actions={toolBarItems.children}
         style={toolBarStyle}
       >

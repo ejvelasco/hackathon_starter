@@ -48,7 +48,7 @@ class LandingPageToolBar extends React.Component {
     return (
       <Toolbar
         id="main-toolbar"
-        title={<div><img style={smallLogoStyle} src={logoPath}></img><h1 style={brandStyle}>PairUp</h1></div>}
+        title={ <Link to={'/'}><img style={smallLogoStyle} src={logoPath}></img><h1 style={brandStyle}>PairUp</h1></Link>}
         actions={toolBarItems.children}
         style={toolBarStyle}
       >

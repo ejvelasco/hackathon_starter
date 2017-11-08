@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Media, Cell, Button } from 'react-md';
+import { Link } from 'react-router-dom';
 
 const coverStyle = {
   height: '100%',
@@ -53,7 +54,7 @@ class Cover extends React.Component {
           <Cell style={coverTextStyle} size={6}>
             <h1 style={titleStyle}>Title</h1>
             <h2 style={subtitleStyle}>Subtitle</h2>
-            <Button style={buttonStyle} raised primary theme>Get Started</Button>
+            <Link to={'/start'}><Button style={buttonStyle} raised primary theme>Get Started</Button></Link>
           </Cell>
         </Grid>
       </div>

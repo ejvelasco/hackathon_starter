@@ -39,8 +39,8 @@ class GetStarted extends React.Component {
           <Cell style={coverStyle} size={4} offset={4}>
             <h1 style={titleStyle}>Title</h1>
             <h2 style={subtitleStyle}>Subtitle</h2>
-             <Link to='/advertiser' key={'logIn'}><Button style={buttonStyle} raised primary theme>Advertiser</Button></Link>
-             <Link to='/influencer' key={'logIn'}><Button style={buttonStyle} raised primary theme>Influencer</Button></Link>
+             <Link to='/register/advertiser' key={'logIn'}><Button style={buttonStyle} raised primary theme>Advertiser</Button></Link>
+             <Link to='/register/influencer' key={'logIn'}><Button style={buttonStyle} raised primary theme>Influencer</Button></Link>
           </Cell>
         </Grid>
       </div>

@@ -7,6 +7,8 @@ import App from './App';
 import LogIn from './components/LogIn';
 import Register from './components/Register';
 import GetStarted from './components/GetStarted';
+import RegisterAdvertiser from './components/RegisterAdvertiser';
+import RegisterInfluencer from './components/RegisterInfluencer';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -62,6 +64,9 @@ class Routes extends React.Component {
 					<Switch>
 				  	<Route path="/start" component={GetStarted}/>
 				  	<Route path="/login" component={LogIn}/>
+				  	<Route path="/login" component={LogIn}/>
+				  	<Route path="/register/influencer" component={RegisterInfluencer}/>
+				  	<Route path="/register/advertiser" component={RegisterAdvertiser}/>
 				  	<Route path="/" render={this.renderHome(user.id)}/>
 					</Switch>
 				</div>
