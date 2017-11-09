@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Cell, Grid, Divider, FontIcon, TextField, SVGIcon, SelectField } from 'react-md';
 import axios from 'axios';
+import GetStartedToolbar from './GetStartedToolbar';
 
 const STRING_ITEMS = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 const sectionStyle = {
@@ -8,11 +9,10 @@ const sectionStyle = {
   paddingTop: '0px',
 };
 const gridStyle = {
-  position: 'absolute', 
-  top: '50%',
+  position: 'relative', 
+  top: '50px',
   width: '100%',
-  transform: 'translateY(-55%)',
-}
+};
 const toolBarButtonStyle = {
   padding: '20px',
   marginRight: '10px',
@@ -29,7 +29,10 @@ class RegisterInfluencer extends React.Component {
     super(props);
   }
   register() {
-    axios.post('/api/register', {})
+    axios.post('/api/register', {
+      username: 'trung',
+      password: 'hello',
+    })
      .then((res) => {
        console.log(res.data);
        // newState.user = user;
@@ -39,6 +42,7 @@ class RegisterInfluencer extends React.Component {
   render() {
     return (
       <div>
+        <GetStartedToolbar />
         <Grid style={gridStyle}>
           <Cell size={4} offset={4}>
             <section style={sectionStyle} className="dividers__example md-paper md-paper--3">

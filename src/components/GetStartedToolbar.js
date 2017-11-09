@@ -33,6 +33,12 @@ const brandStyle = {
 const brandContainerStyle = {
   cursor: 'pointer',
 };
+const messageStyle = {
+  float: 'left',
+  marginRight: '10px',
+  lineHeight: '52px',
+};
+
 const toolBarItems = {
   navItems : [{
     key: 'inbox',
@@ -41,6 +47,8 @@ const toolBarItems = {
     active: true,
   }],
   children: [
+    <p style={messageStyle}>Already have an account?</p>,
+    <Link to={'/login'}><Button style={toolBarButtonStyle} raised primary theme>Log In</Button></Link>,
   ],
 };
 
